@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { -webkit-tap-highlight-color: transparent; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  @apply bg-paper text-text font-body antialiased;
+}
+
+h1, h2, h3, h4 {
+  @apply font-display;
+}
+
+::selection {
+  background: #C9A45C;
+  color: #141317;
+}
+
+/* slim luxury scrollbars */
+.scroll-slim::-webkit-scrollbar { width: 7px; height: 7px; }
+.scroll-slim::-webkit-scrollbar-track { background: transparent; }
+.scroll-slim::-webkit-scrollbar-thumb { background: rgba(201,164,92,0.35); border-radius: 8px; }
+.scroll-slim::-webkit-scrollbar-thumb:hover { background: rgba(201,164,92,0.6); }
+
+.scroll-slim { scrollbar-width: thin; scrollbar-color: rgba(201,164,92,0.4) transparent; }
+
+.shimmer-bg {
+  background-image: linear-gradient(100deg, transparent 20%, rgba(255,255,255,0.15) 40%, transparent 60%);
+  background-size: 800px 100%;
+}
+
+.focus-gold:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(201,164,92,0.55);
+}
+
+.bg-noise {
+  background-image: radial-gradient(rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
